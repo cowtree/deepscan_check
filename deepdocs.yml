@@ -1,4 +1,4 @@
-target:  
- - url: "docs/"  
-reinit: "random-string"  
+target:
+- url: "docs/"
+reinit: "random-string"
 ignore: []

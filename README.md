@@ -1,4 +1,4 @@
-# deepscan_check
+# deepdocs_check
 
 - Test step by step workflow:
     - Created deepdoc_check branch
