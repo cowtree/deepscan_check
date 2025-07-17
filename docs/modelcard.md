@@ -1,102 +1,96 @@
-# Model Card: [Model Name]
+# Model Card: Iris Flower Classifier
 
 ## Model Details
 
 **Developed by:** [Your Organization/Team]  
-**Model type:** [e.g., Classification, Regression, Generative, etc.]  
-**Version:** [e.g., 1.0.0]  
-**Last updated:** [YYYY-MM-DD]  
+**Model type:** Classification  
+**Version:** 1.0.0  
+**Last updated:** 2025-07-17  
 **License:** [e.g., MIT, Apache 2.0, Proprietary]  
-**Model Architecture:** [e.g., Transformer, CNN, LSTM, etc.]
+**Model Architecture:** Pipeline (StandardScaler → LogisticRegression)
 
 ## Features
 
 ### Input Features
-- **Feature 1:** [Description, data type, importance]
-- **Feature 2:** [Description, data type, importance]
-- **Feature 3:** [Description, data type, importance]
-- [Additional features as needed]
+- **sepal length (cm):** numeric feature representing the length of the sepal, standardized.  
+- **sepal width (cm):** numeric feature representing the width of the sepal, standardized.  
+- **petal length (cm):** numeric feature representing the length of the petal, standardized.  
+- **petal width (cm):** numeric feature representing the width of the petal, standardized.
 
 ### Feature Engineering
-- [Description of feature transformations]
-- [Feature selection methods used]
-- [Feature importance analysis]
+- All input features are scaled using `StandardScaler` before model training.
 
 ### Feature Requirements
-- [Required vs. optional features]
-- [Data format requirements]
-- [Valid ranges or constraints]
+- All four features are required.  
+- Input data must be numeric and in the same units (cm).  
+- Missing values are not handled by the pipeline.
 
 ## Intended Use
 
 ### Primary Intended Uses
-- [Describe the primary intended use cases]
+- Classification of Iris flower species based on sepal and petal measurements.
 
 ### Primary Intended Users
-- [List the intended user groups]
+- Data scientists and researchers exploring classification pipelines.
 
 ### Out-of-Scope Use Cases
-- [List use cases that the model is not intended for]
+- Any application beyond Iris species classification.
 
 ## Factors
 
 ### Relevant Factors
-- [List factors that might influence model performance, e.g., demographic attributes, environmental conditions, technical factors]
+- Feature measurement accuracy (e.g., measurement instrument precision).
 
 ### Evaluation Factors
-- [List factors that were evaluated during model testing]
+- Stratified split by target class to ensure balanced evaluation.
 
 ## Metrics
 
 ### Model Performance Measures
-- **Accuracy:** [value]
-- **Precision:** [value]
-- **Recall:** [value]
-- **F1 Score:** [value]
-- [Other relevant metrics]
-
-### Decision Thresholds
-- [If applicable, describe any thresholds used]
+- **Accuracy:** 0.9111  
+- **Precision (weighted):** 0.9155  
+- **Recall (weighted):** 0.9111  
+- **F1 Score (weighted):** 0.9107 
 
 ## Evaluation Data
 
 ### Datasets
-- **Training Data:** [Description of training data, including size, source, and key characteristics]
-- **Validation Data:** [Description of validation data]
-- **Test Data:** [Description of test data]
+- **Training Data:** 105 examples  
+- **Test Data:** 45 examples
 
 ### Motivation
-- [Explain why these datasets were chosen]
+- Standard Iris dataset split ensures representative class distribution.
 
 ### Preprocessing
-- [Describe any preprocessing steps applied to the data]
+- Standard scaling applied to all features.
 
 ## Training Data
 
 ### Training Data Overview
-- **Size:** [e.g., number of examples, GB]
-- **Collection process:** [Brief description]
-- **Preprocessing:** [Key preprocessing steps]
+- **Size:** 105 examples  
+- **Collection process:** Split from the built-in Iris dataset.  
+- **Preprocessing:** Scaled using `StandardScaler`.
 
 ## Ethical Considerations
 
-- **Data Privacy:** [Discuss data privacy considerations]
-- **Potential Biases:** [Discuss potential biases in the model]
-- **Potential Risks:** [Discuss potential risks associated with model use]
+- **Data Privacy:** Iris dataset is public and contains no sensitive information.  
+- **Potential Biases:** Limited to three species; may not generalize beyond dataset.  
+- **Potential Risks:** Misclassification in edge cases.
 
 ## Caveats and Recommendations
 
-- [List important caveats about the model]
-- [Provide recommendations for model use]
+- Ensure input features match units and order used during training.  
+- Avoid using the model on non-Iris datasets.
 
 ## Quantitative Analyses
 
 ### Performance Breakdown
-- [Provide performance breakdowns by relevant factors]
+- See `classification_report` in the evaluation logs for per-class metrics.
 
 ## References
 
-- [List relevant papers, documents, or resources]
+- Fisher, R. A. (1936). The use of multiple measurements in taxonomic problems.  
+- Mitchell, M. et al. (2019). Model Cards for Model Reporting.
 
 ## Model Card Contact
 
