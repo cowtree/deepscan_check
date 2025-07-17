@@ -5,3 +5,5 @@
     - Add `deepdocs.yml` and create `docs/` folder
     - Add `modelcard.md` skeleton to `docs/` folder
     - Create simple ML sklearn pipeline example
+    - Triggering deepdoc, merged deepdoc commit to branch
+    - Updated ML pipeline with RF and HPO
