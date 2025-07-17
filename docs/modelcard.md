@@ -7,7 +7,7 @@
 **Version:** 1.0.0  
 **Last updated:** 2025-07-17  
 **License:** [e.g., MIT, Apache 2.0, Proprietary]  
-**Model Architecture:** Pipeline (StandardScaler → LogisticRegression)
+**Model Architecture:** Pipeline (StandardScaler → RandomForestClassifier) selected via hyperparameter optimization among LogisticRegression and RandomForestClassifier
 
 ## Features
 
