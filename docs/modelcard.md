@@ -103,3 +103,5 @@
 **Contact:** [Email or other contact information]
 
 ---
+
+This model card follows the framework proposed by Mitchell et al. (2019) in "Model Cards for Model Reporting".
