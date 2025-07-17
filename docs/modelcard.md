@@ -7,7 +7,7 @@
 **Version:** 1.0.0  
 **Last updated:** 2025-07-17  
 **License:** [e.g., MIT, Apache 2.0, Proprietary]  
-**Model Architecture:** Pipeline (StandardScaler → LogisticRegression)
+**Model Architecture:** Pipeline (StandardScaler → RandomForestClassifier) with hyperparameter optimization (GridSearchCV)
 
 ## Features
 
