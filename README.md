@@ -1,4 +1,3 @@
 # deepscan_check
 
-check stuff balbla
-check check
+make a clean version to start with
